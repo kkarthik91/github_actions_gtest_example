@@ -141,5 +141,5 @@ TEST_P(Even_Test_Suite, AssertForEvenNumber){
 INSTANTIATE_TEST_SUITE_P(
 IsEvenParamTestExample,
 Even_Test_Suite,
-Values(1,4,6,7,8,9)
+Values(12,4,6,18,8,24)
 );
