@@ -69,9 +69,16 @@ int StringCalculator::Add(const string &input) {
 	return accumulate(numbers.begin(), numbers.end(), 0);
 }
 
+//Test fixture
+class string_calculator_add:public Test{
+protected:
+	//Arrange //creating object for 4 test cases
+	StringCalculator ObjUnderTest;
+}
+
 TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_string){
 	//Arrange
-	StringCalculator ObjUnderTest;
+	// StringCalculator ObjUnderTest;
 	string input = " ";
 	int expectedValue=0;
 	
@@ -84,7 +91,7 @@ TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_stri
 
 TEST(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
 	//Arrange
-	StringCalculator ObjUnderTest;
+	// StringCalculator ObjUnderTest;
 	string input = "1";
 	int expectedValue=1;
 
@@ -97,7 +104,7 @@ TEST(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
 
 TEST(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2){
 	//Arrange
-	StringCalculator ObjUnderTest;
+	// StringCalculator ObjUnderTest;
 	string input = "1,2";
 	int expectedValue=3;
 	
@@ -109,7 +116,7 @@ TEST(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2)
 }
 TEST(string_calculator_add,When_passed_A_Single_Number_returns_6_for_string_1_2_3){
 	//Arrange
-	StringCalculator ObjUnderTest;
+	// StringCalculator ObjUnderTest;
 	string input = "1,2,3";
 	int expectedValue=6;
 	
