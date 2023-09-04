@@ -76,7 +76,7 @@ protected:
 	StringCalculator ObjUnderTest;
 }
 
-TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_string){
+TEST_F(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_string){
 	//Arrange
 	// StringCalculator ObjUnderTest;
 	string input = " ";
@@ -89,7 +89,7 @@ TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_stri
 	ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
+TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
 	//Arrange
 	// StringCalculator ObjUnderTest;
 	string input = "1";
@@ -102,7 +102,7 @@ TEST(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
 	ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2){
+TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2){
 	//Arrange
 	// StringCalculator ObjUnderTest;
 	string input = "1,2";
@@ -114,7 +114,7 @@ TEST(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2)
 	//Assert
 	ASSERT_EQ(actualValue,expectedValue);
 }
-TEST(string_calculator_add,When_passed_A_Single_Number_returns_6_for_string_1_2_3){
+TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_6_for_string_1_2_3){
 	//Arrange
 	// StringCalculator ObjUnderTest;
 	string input = "1,2,3";
