@@ -74,7 +74,7 @@ class string_calculator_add:public Test{
 protected:
 	//Arrange //creating object for 4 test cases
 	StringCalculator ObjUnderTest;
-}
+};
 
 TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_0_for_empty_string){
 	//Arrange
