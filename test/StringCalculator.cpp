@@ -86,12 +86,11 @@ INSTANTIATE_TEST_SUITE_P(
 	StringCalcualtorParameterTest,
 	string_calculator_add,
 	Values(
-		std::make_tuple("", 0);
-		std::make_tuple("1", 1);
-		std::make_tuple("1,2", 3);
-		std::make_tuple("1,2,3", 6);
-	)
-);
+		std::make_tuple("", 0),
+		std::make_tuple("1", 1),
+		std::make_tuple("1,2", 3),
+		std::make_tuple("1,2,3", 6),
+	));
 
 // TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_0_for_empty_string){
 // 	//Arrange
