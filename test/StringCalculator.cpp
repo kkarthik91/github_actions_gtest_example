@@ -72,7 +72,7 @@ int StringCalculator::Add(const string &input) {
 TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_string){
 	//Arrange
 	StringCalculator ObjUnderTest;
-	string input "";
+	string input " ";
 	int expectedValue=0;
 	
 	//Act
