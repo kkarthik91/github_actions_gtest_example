@@ -95,7 +95,7 @@ TEST(string_calculator_add_When_passed_A_Single_Number, returns_1_for_string_1){
 	ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(string_calculator_add_When_passed_A_Single_Number, returns_3_for_string_1,2){
+TEST(string_calculator_add_When_passed_A_Single_Number, returns_3_for_string_1_2){
 	//Arrange
 	StringCalculator ObjUnderTest;
 	string input = "1,2";
