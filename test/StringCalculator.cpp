@@ -79,7 +79,7 @@ TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_stri
 	int actualValue=objUnderTest.Add(input);
 
 	//Assert
-	ASSERT_EQ(actualValue,expectedValue)
+	ASSERT_EQ(actualValue,expectedValue);
 
 
 }
