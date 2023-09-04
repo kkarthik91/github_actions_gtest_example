@@ -126,3 +126,20 @@ TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_6_for_string_1_
 	//Assert
 	ASSERT_EQ(actualValue,expectedValue);
 }
+class Even_Test_Suite : public TestWithParam<int>{
+
+};
+
+bool isEven(int number){ return number % 2 == 0;}
+TEST_P(Even_Test_Suite, AssertForEvenNumber){
+	int input=GetParam();
+	bool expectedValue=true;
+	bool actualValue = isEvent(input);
+	ASSERT_EQ(expectedValue,actualValue);
+}
+
+INSTANTIATE_TEST_SUITE_P(
+IsEvenParamTestExample,
+Even_Test_Suite,
+Values(1,4,6,7,8,9)
+);
