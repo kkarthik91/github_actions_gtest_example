@@ -76,7 +76,7 @@ protected:
 	StringCalculator ObjUnderTest;
 }
 
-TEST_F(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_string){
+TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_0_for_empty_string){
 	//Arrange
 	// StringCalculator ObjUnderTest;
 	string input = " ";
