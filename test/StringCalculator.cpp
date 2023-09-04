@@ -70,7 +70,7 @@ int StringCalculator::Add(const string &input) {
 }
 
 //Test fixture
-class string_calculator_add:public TestWithParam<std::tupl<string,int>>{
+class string_calculator_add:public TestWithParam<std::tuple<string,int>>{
 protected:
 	//Arrange //creating object for 4 test cases
 	StringCalculator ObjUnderTest;
