@@ -134,7 +134,7 @@ bool isEven(int number){ return number % 2 == 0;}
 TEST_P(Even_Test_Suite, AssertForEvenNumber){
 	int input=GetParam();
 	bool expectedValue=true;
-	bool actualValue = isEvent(input);
+	bool actualValue = isEven(input);
 	ASSERT_EQ(expectedValue,actualValue);
 }
 
