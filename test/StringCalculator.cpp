@@ -76,7 +76,7 @@ TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_stri
 	int expectedValue=0;
 	
 	//Act
-	int actualValue=objUnderTest.Add(input);
+	int actualValue=ObjUnderTest.Add(input);
 
 	//Assert
 	ASSERT_EQ(actualValue,expectedValue);
