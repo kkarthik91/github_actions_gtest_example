@@ -70,62 +70,79 @@ int StringCalculator::Add(const string &input) {
 }
 
 //Test fixture
-class string_calculator_add:public Test{
+class string_calculator_add:public TestWithParam<std::tupl<string,int>>{
 protected:
 	//Arrange //creating object for 4 test cases
 	StringCalculator ObjUnderTest;
 };
 
-TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_0_for_empty_string){
-	//Arrange
-	// StringCalculator ObjUnderTest;
-	string input = " ";
-	int expectedValue=0;
+TEST_P(string_calculator_add, AssertAddOperation){
+	const std:tuple<string,int> & parameter = GetParam();
+	string input = std::get<0>(parameter);
+	int expectedValue = std::get<1>(parameter);
+	int actualValue = ObjUnderTest.Add(input);
+}
+INSTANTIATE_TEST_SUITE_P(
+	StringCalcualtorParameterTest,
+	string_calculator_add,
+	Values(
+		std::make_tuple("", 0);
+		std::make_tuple("1", 1);
+		std::make_tuple("1,2", 3);
+		std::make_tuple("1,2,3", 6);
+	)
+);
+
+// TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_0_for_empty_string){
+// 	//Arrange
+// 	// StringCalculator ObjUnderTest;
+// 	string input = " ";
+// 	int expectedValue=0;
 	
-	//Act
-	int actualValue=ObjUnderTest.Add(input);
+// 	//Act
+// 	int actualValue=ObjUnderTest.Add(input);
 
-	//Assert
-	ASSERT_EQ(actualValue,expectedValue);
-}
+// 	//Assert
+// 	ASSERT_EQ(actualValue,expectedValue);
+// }
 
-TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
-	//Arrange
-	// StringCalculator ObjUnderTest;
-	string input = "1";
-	int expectedValue=1;
+// TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_1_for_string_1){
+// 	//Arrange
+// 	// StringCalculator ObjUnderTest;
+// 	string input = "1";
+// 	int expectedValue=1;
 
-	//Act
-	int actualValue=ObjUnderTest.Add(input);
+// 	//Act
+// 	int actualValue=ObjUnderTest.Add(input);
 
-	//Assert
-	ASSERT_EQ(actualValue,expectedValue);
-}
+// 	//Assert
+// 	ASSERT_EQ(actualValue,expectedValue);
+// }
 
-TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2){
-	//Arrange
-	// StringCalculator ObjUnderTest;
-	string input = "1,2";
-	int expectedValue=3;
+// TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_3_for_string_1_2){
+// 	//Arrange
+// 	// StringCalculator ObjUnderTest;
+// 	string input = "1,2";
+// 	int expectedValue=3;
 	
-	//Act
-	int actualValue=ObjUnderTest.Add(input);
+// 	//Act
+// 	int actualValue=ObjUnderTest.Add(input);
 
-	//Assert
-	ASSERT_EQ(actualValue,expectedValue);
-}
-TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_6_for_string_1_2_3){
-	//Arrange
-	// StringCalculator ObjUnderTest;
-	string input = "1,2,3";
-	int expectedValue=6;
+// 	//Assert
+// 	ASSERT_EQ(actualValue,expectedValue);
+// }
+// TEST_F(string_calculator_add,When_passed_A_Single_Number_returns_6_for_string_1_2_3){
+// 	//Arrange
+// 	// StringCalculator ObjUnderTest;
+// 	string input = "1,2,3";
+// 	int expectedValue=6;
 	
-	//Act
-	int actualValue=ObjUnderTest.Add(input);
+// 	//Act
+// 	int actualValue=ObjUnderTest.Add(input);
 
-	//Assert
-	ASSERT_EQ(actualValue,expectedValue);
-}
+// 	//Assert
+// 	ASSERT_EQ(actualValue,expectedValue);
+// }
 class Even_Test_Suite : public TestWithParam<int>{
 
 };
