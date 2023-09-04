@@ -80,6 +80,30 @@ TEST(string_calculator_add_When_passed_A_Single_Number, returns_0_for_empty_stri
 
 	//Assert
 	ASSERT_EQ(actualValue,expectedValue);
+}
 
+TEST(string_calculator_add_When_passed_A_Single_Number, returns_1_for_string_1){
+	//Arrange
+	StringCalculator ObjUnderTest;
+	string input = "1";
+	int expectedValue=1;
 
+	//Act
+	int actualValue=ObjUnderTest.Add(input);
+
+	//Assert
+	ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(string_calculator_add_When_passed_A_Single_Number, returns_3_for_string_1,2){
+	//Arrange
+	StringCalculator ObjUnderTest;
+	string input = "1,2";
+	int expectedValue=3;
+	
+	//Act
+	int actualValue=ObjUnderTest.Add(input);
+
+	//Assert
+	ASSERT_EQ(actualValue,expectedValue);
 }
